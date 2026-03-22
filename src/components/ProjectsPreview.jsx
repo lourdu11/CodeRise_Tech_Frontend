@@ -33,10 +33,15 @@ const ProjectsPreview = () => {
     const fetchProjects = async () => {
       try {
         const res = await axios.get('/api/projects');
-        setProjects(res.data);
+        if (Array.isArray(res.data)) {
+          setProjects(res.data);
+        } else {
+          console.error("API Error: Expected array but got", typeof res.data);
+          setProjects([]);
+        }
       } catch (err) {
         console.error("Error fetching projects", err);
-        // Fallback or empty state
+        setProjects([]);
       } finally {
         setLoading(false);
       }

@@ -67,8 +67,8 @@ const AdminDashboard = () => {
         axios.get('/api/projects'),
         axios.get('/api/contact', { headers })
       ]);
-      setProjects(projRes.data);
-      setContacts(contactRes.data);
+      setProjects(Array.isArray(projRes.data) ? projRes.data : []);
+      setContacts(Array.isArray(contactRes.data) ? contactRes.data : []);
     } catch (err) {
       console.error(err);
       if (err.response?.status === 401) {
