@@ -18,7 +18,7 @@ import {
 import Logo from '../components/Logo';
 import { useTheme } from '../context/ThemeContext';
 
-const API_URL = 'http://localhost:5000';
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
 
 const AdminDashboard = () => {
   const { theme } = useTheme();
