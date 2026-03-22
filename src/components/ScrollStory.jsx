@@ -11,11 +11,11 @@ const ScrollStory = () => {
     offset: ["start end", "end start"]
   });
 
-  const springScroll = useSpring(scrollYProgress, { stiffness: 100, damping: 30 });
+  const springScroll = useSpring(scrollYProgress, { stiffness: 100, damping: 20, restDelta: 0.001 });
 
   const opacity = useTransform(springScroll, [0, 0.2, 0.5, 0.8], [0, 1, 1, 0]);
   const scale = useTransform(springScroll, [0, 0.5, 1], [0.8, 1, 1.2]);
-  const y = useTransform(springScroll, [0, 1], [100, -100]);
+  const y = useTransform(springScroll, [0, 1], [150, -150]);
   
   // Character Split Animation Variables
   const text = "We orchestrate intricate logic into immersive digital realities.";
@@ -46,7 +46,7 @@ const ScrollStory = () => {
               key={i}
               initial={{ y: 20, opacity: 0 }}
               whileInView={{ y: 0, opacity: 1 }}
-              transition={{ delay: i * 0.1, duration: 0.5 }}
+              transition={{ delay: i * 0.05, duration: 0.4 }}
               className={(word === "intricate" || word === "realities.") ? "gradient-text" : ""}
             >
               {word}

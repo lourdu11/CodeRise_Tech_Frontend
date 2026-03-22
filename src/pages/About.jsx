@@ -9,47 +9,47 @@ import { Target, Eye, Users, Award, Linkedin, Github, Instagram, Globe, MessageS
 const team = [
   {
     name: "Lourdu Xavier",
-    role: "Founder & CEO",
+    role: "Founder",
     skills: ["Leadership", "Decision Making", "MERN Stack Developer", "Devops","AI Integration"],
     image: "https://ik.imagekit.io/Lourdu/CodeRise/lourdu.jpeg",
     bio: "Founder and full-stack engineer focused on building scalable MERN stack applications, AI-powered solutions, and cloud deployments. Driven by innovation, fast delivery, and creating impactful digital experiences for clients and startups.",
-    socials: { linkedin: "https://www.linkedin.com/in/coderisetech", github: "https://github.com/coderisetech2026-ship-it", instagram: "https://www.instagram.com/coderise_tech", portfolio: "#" }
+    socials: { linkedin: "https://www.linkedin.com/in/lourdu11", github: "https://github.com/coderisetech2026-ship-it", instagram: "https://www.instagram.com/coderise_tech", portfolio: "https://lourduxavier.xyz" }
 
   },
   {
     name: "Kirubalan",
-    role: "Co-Founder & CTO",
+    role: "Co-Founder",
 
     skills: ["LAMP Stack Developer", "Scalability","API Development","Hacker","System & Network Troubleshooting"],
     image: "https://ik.imagekit.io/Lourdu/CodeRise/WhatsApp%20Image%202026-03-20%20at%2017.38.10.jpeg",
     bio: "Co-Founder and software engineer focused on LAMP stack development, AI integration, and scalable architectures. Dedicated to building high-performance applications and driving technical innovation within the organization.",
-    socials: { linkedin: "https://www.linkedin.com/in/coderisetech", github: "https://github.com/coderisetech2026-ship-it", instagram: "https://www.instagram.com/coderise_tech", portfolio: "#" }
+    socials: { linkedin: "https://www.linkedin.com/in/kirubalan-v/", github: "https://github.com/coderisetech2026-ship-it", instagram: "https://www.instagram.com/coderise_tech", portfolio: "#" }
 
   },
   {
     name: "Makeshwaran ",
-    role: "COO",
+    role: "Chief Operating Officer",
 
     skills: ["HTML","CSS","JAVASCRIPT","BOOTSTRAP","PHP","MySQL"],
     image: "https://ik.imagekit.io/Lourdu/CodeRise/makesh.jpeg",
 bio: "Frontend developer focused on creating responsive and interactive web interfaces using HTML, CSS, JavaScript, and Bootstrap. Passionate about delivering smooth user experiences and modern UI designs.",
-    socials: { linkedin: "https://www.linkedin.com/in/coderisetech", github: "https://github.com/coderisetech2026-ship-it", instagram: "https://www.instagram.com/coderise_tech", portfolio: "#" }
+    socials: { linkedin: "https://www.linkedin.com/in/makeshwaran-c-a1a65731", github: "https://github.com/coderisetech2026-ship-it", instagram: "https://www.instagram.com/coderise_tech", portfolio: "https://makesh.fast-page.org/" }
 
   },
 
   {
     name: "Jaisuvisane",
-    role: "Senior MERN Stack Developer",
+    role: "Chief Technology Officer",
 
     skills: ["MERN Stack Developer", "AI Integration", "REST API","UI/UX Designer"],
     image: "https://ik.imagekit.io/Lourdu/CodeRise/WhatsApp%20Image%202026-03-20%20at%2018.52.08.jpeg",
     bio: "Senior MERN Stack Developer specializing in building scalable full-stack applications using MongoDB, Express.js, React, and Node.js. Experienced in developing efficient APIs and integrating modern technologies to deliver high-performance solutions.",
-    socials: { linkedin: "https://www.linkedin.com/in/coderisetech", github: "https://github.com/coderisetech2026-ship-it", instagram: "https://www.instagram.com/coderise_tech", portfolio: "#" }
+    socials: { linkedin: "https://www.linkedin.com/in/jaisuvisane-j-75665b318", github: "https://github.com/coderisetech2026-ship-it", instagram: "https://www.instagram.com/coderise_tech", portfolio: "https://myportfolio-ten-iota-73.vercel.app" }
 
   },
   {
     name: "Antobendict",
-    role: "Client Relationship Manager",
+    role: "Chief Executive Officer",
 
     skills: ["Communication", "Client Handling", "Relationship Building", "Coordination"],
     image: "" ,
@@ -58,7 +58,7 @@ bio: "Frontend developer focused on creating responsive and interactive web inte
 
   },
   {
-    name: "Jaisuvisane",
+    name: "Nithish",
     role: "Chief Marketing Officer",
 
     skills: ["Communication", "Team Coordination", "Problem Solving", "Time Management"],

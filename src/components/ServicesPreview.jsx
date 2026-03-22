@@ -66,10 +66,10 @@ const ServicesPreview = () => {
           {services.map((service, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.1, duration: 0.5, ease: "easeOut" }}
+              transition={{ delay: index * 0.05, duration: 0.4, ease: "easeOut" }}
               whileHover={{ 
                 scale: 1.05, 
                 rotateY: 10,

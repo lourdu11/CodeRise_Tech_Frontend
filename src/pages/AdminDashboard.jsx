@@ -64,8 +64,8 @@ const AdminDashboard = () => {
 
     try {
       const [projRes, contactRes] = await Promise.all([
-        axios.get('/api/projects'),
-        axios.get('/api/contact', { headers })
+        axios.get(`${API_URL}/api/projects`),
+        axios.get(`${API_URL}/api/contact`, { headers })
       ]);
       setProjects(Array.isArray(projRes.data) ? projRes.data : []);
       setContacts(Array.isArray(contactRes.data) ? contactRes.data : []);
@@ -90,7 +90,7 @@ const AdminDashboard = () => {
     
     const token = localStorage.getItem('adminToken');
     try {
-      await axios.delete(`/api/projects/${id}`, {
+      await axios.delete(`${API_URL}/api/projects/${id}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
       setProjects(projects.filter(p => p._id !== id));
@@ -162,14 +162,14 @@ const AdminDashboard = () => {
     try {
       if (isEditing) {
         console.log('Updating project with formData');
-        await axios.put(`/api/projects/${editId}`, formData, {
+        await axios.put(`${API_URL}/api/projects/${editId}`, formData, {
           headers: { 
             Authorization: `Bearer ${token}`
           }
         });
       } else {
         console.log('Creating project with formData');
-        await axios.post('/api/projects', formData, {
+        await axios.post(`${API_URL}/api/projects`, formData, {
           headers: { 
             Authorization: `Bearer ${token}`
           }
@@ -364,12 +364,12 @@ const AdminDashboard = () => {
       {/* Add Project Modal */}
       <AnimatePresence>
         {showAddProject && (
-          <div className="fixed inset-0 z-[200] flex items-center justify-center p-4 backdrop-blur-xl bg-black/60 overflow-y-auto">
+          <div className="fixed inset-0 z-[200] flex justify-center p-4 md:p-12 backdrop-blur-xl bg-black/60 overflow-y-auto">
             <motion.div 
-              initial={{ scale: 0.9, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
-              className="glass max-w-2xl w-full rounded-[2.5rem] p-10 border-[var(--surface-border)] relative my-auto shadow-3xl overflow-hidden"
+              initial={{ scale: 0.9, opacity: 0, y: 30 }}
+              animate={{ scale: 1, opacity: 1, y: 0 }}
+              exit={{ scale: 0.9, opacity: 0, y: 30 }}
+              className="glass max-w-2xl w-full rounded-[2.5rem] p-8 md:p-10 border-[var(--surface-border)] relative shadow-3xl h-fit mb-12"
               style={{ backgroundColor: 'var(--bg-color)', color: 'var(--text-main)' }}
               onClick={(e) => e.stopPropagation()}
             >
@@ -428,10 +428,10 @@ const AdminDashboard = () => {
                   <label className="block text-sm font-medium mb-2 ml-1" style={{ color: 'var(--text-alt)' }}>Description</label>
                   <textarea 
                     required
-                    rows="4"
+                    rows="6"
                     value={newProject.desc}
                     onChange={e => setNewProject({...newProject, desc: e.target.value})}
-                    className="w-full bg-[var(--surface-color)] border border-[var(--surface-border)] rounded-2xl px-6 py-4 outline-none focus:border-primary-blue transition-colors resize-none text-[var(--text-main)] placeholder:text-gray-500"
+                    className="w-full bg-[var(--surface-color)] border border-[var(--surface-border)] rounded-2xl px-6 py-4 outline-none focus:border-primary-blue transition-colors resize-none text-[var(--text-main)] placeholder:text-gray-500 min-h-[150px]"
                     placeholder="Brief overview of functionality..."
                   />
                 </div>
@@ -462,10 +462,10 @@ const AdminDashboard = () => {
                 <div>
                   <label className="block text-sm font-medium mb-2 ml-1" style={{ color: 'var(--text-alt)' }}>Use Case / Problem Solved</label>
                   <textarea 
-                    rows="3"
+                    rows="5"
                     value={newProject.useCase}
                     onChange={e => setNewProject({...newProject, useCase: e.target.value})}
-                    className="w-full bg-[var(--surface-color)] border border-[var(--surface-border)] rounded-2xl px-6 py-4 outline-none focus:border-primary-blue transition-colors resize-none text-[var(--text-main)] placeholder:text-gray-500"
+                    className="w-full bg-[var(--surface-color)] border border-[var(--surface-border)] rounded-2xl px-6 py-4 outline-none focus:border-primary-blue transition-colors resize-none text-[var(--text-main)] placeholder:text-gray-500 min-h-[120px]"
                     placeholder="Describe the specific problem this project solves..."
                   />
                 </div>

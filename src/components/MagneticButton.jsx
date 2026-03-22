@@ -16,7 +16,7 @@ const MagneticButton = ({ children, className = "", strength = 40 }) => {
       gsap.to(button, {
         x: x * (strength / 100),
         y: y * (strength / 100),
-        duration: 0.6,
+        duration: 0.4,
         ease: "power2.out"
       });
     };
@@ -25,7 +25,7 @@ const MagneticButton = ({ children, className = "", strength = 40 }) => {
       gsap.to(button, {
         x: 0,
         y: 0,
-        duration: 1,
+        duration: 0.7,
         ease: "elastic.out(1, 0.3)"
       });
     };

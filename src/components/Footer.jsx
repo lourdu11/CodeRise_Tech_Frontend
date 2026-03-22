@@ -50,9 +50,11 @@ const Footer = () => {
             className="absolute -top-24 -right-24 w-64 h-64 bg-primary-blue/20 rounded-full blur-[100px]"
           ></motion.div>
 
-          <h2 className="text-4xl md:text-6xl font-bold font-outfit mb-8 relative z-10 leading-tight" style={{ color: "var(--text-main)" }}>
+          <h2 className="text-4xl md:text-6xl font-black font-outfit mb-8 relative z-10 leading-tight tracking-tighter" style={{ color: "var(--text-main)" }}>
             Ready to architect the <br />
-            <span className="gradient-text italic">next breakthrough?</span>
+            <span className="bg-gradient-to-r from-primary-blue via-accent-cyan to-primary-purple bg-clip-text text-transparent italic drop-shadow-sm">
+              next breakthrough?
+            </span>
           </h2>
           
           <motion.button

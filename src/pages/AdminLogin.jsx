@@ -6,6 +6,8 @@ import { Lock, Mail, Loader2, AlertCircle, Eye, EyeOff } from 'lucide-react';
 import Logo from '../components/Logo';
 import { useTheme } from '../context/ThemeContext';
 
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+
 const AdminLogin = () => {
   const [formData, setFormData] = useState({ email: '', password: '' });
   const [showPassword, setShowPassword] = useState(false);
@@ -24,7 +26,7 @@ const AdminLogin = () => {
     setError('');
 
     try {
-      const res = await axios.post('/api/admin/login', formData);
+      const res = await axios.post(`${API_URL}/api/admin/login`, formData);
       localStorage.setItem('adminToken', res.data.token);
       navigate('/admin/dashboard');
     } catch (err) {

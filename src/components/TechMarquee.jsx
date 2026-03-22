@@ -44,9 +44,9 @@ const TechMarquee = () => {
       <div className="absolute inset-y-0 right-0 w-64 bg-gradient-to-l from-[var(--bg-color)] to-transparent z-10 pointer-events-none" />
       
       <div className="flex flex-col gap-6 -rotate-3 scale-110">
-        <MarqueeRow items={techTop} direction={1} speed={50} colorClass="text-accent-cyan/20" hoverColor="hover:text-accent-cyan" />
-        <MarqueeRow items={techMiddle} direction={-1} speed={60} colorClass="text-accent-purple/20" hoverColor="hover:text-primary-purple" />
-        <MarqueeRow items={techBottom} direction={1} speed={55} colorClass="text-accent-rose/20" hoverColor="hover:text-accent-rose" />
+        <MarqueeRow items={techTop} direction={1} speed={30} colorClass="text-accent-cyan/20" hoverColor="hover:text-accent-cyan" />
+        <MarqueeRow items={techMiddle} direction={-1} speed={40} colorClass="text-accent-purple/20" hoverColor="hover:text-primary-purple" />
+        <MarqueeRow items={techBottom} direction={1} speed={35} colorClass="text-accent-rose/20" hoverColor="hover:text-accent-rose" />
       </div>
       
       {/* Centered Overlay Text with pulsing effect */}

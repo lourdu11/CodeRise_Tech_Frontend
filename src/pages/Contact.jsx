@@ -5,6 +5,8 @@ import { Mail, Phone, MapPin, Send, MessageSquare, Smartphone, CheckCircle2, Zap
 import axios from 'axios';
 import { useTheme } from '../context/ThemeContext';
 
+const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000';
+
 const Contact = () => {
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', projectType: '', message: '' });
   const [status, setStatus] = useState({ loading: false, success: false, error: '' });
@@ -34,7 +36,7 @@ const Contact = () => {
     e.preventDefault();
     setStatus({ loading: true, success: false, error: '' });
     try {
-      const res = await axios.post('/api/contact', formData);
+      const res = await axios.post(`${API_URL}/api/contact`, formData);
       if (res.status === 201) {
         setStatus({ loading: false, success: true, error: '' });
         setFormData({ name: '', email: '', phone: '', projectType: '', message: '' });
